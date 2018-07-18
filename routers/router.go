@@ -7,4 +7,5 @@ import (
 
 func InitRouter(server *dotweb.HttpServer)  {
 	server.Router().GET("/wechat", controllers.CheckSignature)
+	server.Router().POST("/wechat", controllers.PostContent)
 }
