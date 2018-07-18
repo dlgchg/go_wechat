@@ -2,21 +2,20 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"net/http"
+	"github.com/devfeel/dotweb"
+	"go_wechat/routers"
 )
 
 func main() {
 
-	http.HandleFunc("/wechat", getWechatServerInfo)
-	error := http.ListenAndServe(":9000", nil)
-	if error != nil {
-		log.Fatalln("ListenAndServe: ", error)
-	}
+	app := dotweb.New()
+	app.SetDevelopmentMode()
+	routers.InitRouter(app.HttpServer)
+
+	port := 80
+	server := app.StartServer(port)
+
+	fmt.Println("dotweb.StartServer error => ", server)
+
 }
 
-func getWechatServerInfo(w http.ResponseWriter, r *http.Request) {
-	r.ParseForm()
-
-	fmt.Println(r.Form)
-}
