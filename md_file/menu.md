@@ -107,7 +107,7 @@ func CreateWXMenu(cache cache.Cache) {
 
 menu.json
 
-```go
+```json
 {
   "button": [
     {
