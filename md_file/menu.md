@@ -51,13 +51,13 @@ http请求方式：POST（请使用https协议） https://api.weixin.qq.com/cgi-
 
 正确时的返回JSON数据包如下
 
-```
+```json
 {"errcode":0,"errmsg":"ok"}
 ```
 
 错误时的返回JSON数据包如下（示例为无效菜单名长度）
 
-```
+```json
 {"errcode":40018,"errmsg":"invalid button name size"}
 ```
 
@@ -66,7 +66,7 @@ http请求方式：POST（请使用https协议） https://api.weixin.qq.com/cgi-
 
 menu.go
 
-```
+```go
 const AddMenuURL = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token="
 
 type MenuModel struct {
@@ -107,7 +107,7 @@ func CreateWXMenu(cache cache.Cache) {
 
 menu.json
 
-```
+```go
 {
   "button": [
     {
