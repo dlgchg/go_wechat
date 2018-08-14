@@ -4,4 +4,4 @@
 
 [2、获取access_token](https://github.com/UOYO/go_wechat/blob/master/md_file/accesstoken.md)
 
-[2、自定义菜单](https://github.com/UOYO/go_wechat/blob/master/md_file/menu.md)
+[3、自定义菜单](https://github.com/UOYO/go_wechat/blob/master/md_file/menu.md)
