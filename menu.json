@@ -1,0 +1,29 @@
+{
+  "button": [
+    {
+      "name": "进入商城",
+      "type": "view",
+      "url": "http://www.baidu.com/"
+    },
+    {
+
+      "name":"管理中心",
+      "sub_button":[
+        {
+          "name": "用户中心",
+          "type": "click",
+          "key": "molan_user_center"
+        },
+        {
+          "name": "公告",
+          "type": "click",
+          "key": "molan_institution"
+        }]
+    },
+    {
+      "name": "资料修改",
+      "type": "view",
+      "url": "http://www.baidu.com/user_view"
+    }
+  ]
+}

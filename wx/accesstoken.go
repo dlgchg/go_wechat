@@ -43,6 +43,7 @@ func getAccessTokenToWX(cache cache.Cache) error {
 		}
 		cache.Set("access_token", accessTokenModel.AccessToken, 0)
 		fmt.Printf("获取到的AccessToken:%s\n", accessTokenModel.AccessToken)
+		CreateWXMenu(cache)
 	} else {
 		accessTokenErrModel := AccessTokenErrModel{}
 		err := json.Unmarshal(body, &accessTokenErrModel)
